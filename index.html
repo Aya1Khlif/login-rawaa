@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        max-width: 100px;
+        width: 50%;
+        max-width: 1000px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .login-app {
+        display: flex;
+        flex-direction: column;
+    padding: 20px;
+        width: 50%;
+      }
+      .login-section,
+      .info-section {
+        flex: 1;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .login-section {
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .login-section h1 {
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+
+      .login-section p {
+        margin-bottom: 20px;
+        color: #666666;
+      }
+
+      .input {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      .input img {
+        position: absolute;
+        z-index: 5;
+        left: 15px;
+width: 20px;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+
+      .input input[type="text"],
+      .input input[type="password"] {
+        width: calc(100% - 60px);
+        padding: 25px;
+        border: none;
+        border-radius: 10em;
+        background-color: rgba(240, 237, 255, 0.8);
+      }
+
+      .login-section button {
+        width: 100%;
+        padding: 10px;
+        background: linear-gradient(99.78deg, #9181f4 -5.85%, #5038ed 109.55%);
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .login-others {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .login-others p {
+        text-align: center;
+        position: relative;
+        margin: 20px 0;
+        font-size: 16px;
+        color: #666666;
+      }
+
+      .login-others p::before,
+      .login-others p::after {
+        content: "";
+        display: block;
+        width: 34%;
+        height: 1px;
+        background: #cccccc;
+        position: absolute;
+        top: 50%;
+      }
+
+      .login-others p::before {
+        left: 0;
+      }
+
+      .login-others p::after {
+        right: 0;
+      }
+
+      .login-others button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+        border: 1px solid #cccccc;
+        color: #333333;
+        border-radius: 40px;
+        cursor: pointer;
+        background-color: transparent;
+      }
+
+      .login-others button img {
+        width: 20px;
+      }
+
+      .info-section {
+        position: relative;
+        background-image: url(./assets/img/Rectangle.png);
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+
+      }
+
+      .info-section .info {
+        padding: 20px;
+        margin-top: 200px;
+       width: 80px;
+        z-index: 2;
+      }
+      .info p {
+        font-weight: 700;
+      }
+
+      .info img {
+        max-width: 100%;
+        height: 16em;
+        border-radius: 8px;
+        position: relative;
+        top: 255px;
+        left: px;
+      }
+      .icon{
+        position: relative;
+        top: 65px;
+        left: 20px;
+        z-index: 555;
+      }
+      .circle{
+        position: relative;
+        z-index: 5;
+      }
+
+      .info-section .background {
+        position: absolute;
+        top: 220px;
+        left: 2em;
+        width: 75%;
+        height: 50%;
+        z-index: 1;
+        background-image: url("./assets/img/Rectangle2.png");
+        border-radius: 40px;
+        background-position: center;
+      }
+
+      .info-section .foreground {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 80%;
+        z-index: 2;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+
+        .login-section,
+        .info-section {
+          min-width: 100%;
+        }
+
+        .info-section .foreground {
+          width: 100%;
+          position: static;
+          z-index: 2;
+        }
+
+        .info-section .background {
+          position: static;
+          height: 200px;
+          z-index: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-app">
+        <div class="login-section">
+          <h1>LOGIN</h1>
+          <p>How to i get started lorem ipsum dolor at?</p>
+          <div class="input">
+            <img src="./assets/img/Frame.png" alt="Username Icon" /><input
+              type="text"
+              placeholder="   Username"
+            />
+          </div>
+          <div class="input">
+            <img src="./assets/img/Frame2.png" alt="Password Icon" /><input
+              type="password"
+              placeholder="   Password"
+            />
+          </div>
+          <button>Login Now</button>
+        </div>
+        <div class="login-others">
+          <p>Login with Others</p>
+          <button>
+            <img src="./assets/img/google.png" alt="Google Logo" />
+            Login with Google
+          </button>
+          <button>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+              alt="Facebook Logo"
+            />
+            Login with Facebook
+          </button>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info">
+
+          <p>
+            Very good <br />
+            works are
+            <br />
+            waiting for <br />
+            you Login
+            <br />
+            Now!!!
+          </p>
+          <img
+          class="foreground"
+          src="./assets/img/woomen.png"
+          alt="Info Image"
+        />
+        </div>
+        <div class="icon">
+            <img src="./assets/img/thunderbolt.png" alt="">
+            
+        </div>
+        <div class="circle">
+          <img src="./assets/img/5.png" alt="">
+        </div>
+        <div class="background"></div>
+      </div>
+    </div>
+  </body>
+</html>
